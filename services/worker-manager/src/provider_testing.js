@@ -17,6 +17,10 @@ class TestingProvider extends Provider {
   async removeResources({workerType}) {
     this.monitor.notice('remove-resource', {workerTypeName: workerType.workerTypeName});
   }
+
+  async provision({workerType}) {
+    this.monitor.notice('test-provision', {workerTypeName: workerType.workerTypeName});
+  }
 }
 
 module.exports = {
